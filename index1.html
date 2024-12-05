@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Analysis Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #filters, #sort-options {
+      margin-bottom: 15px;
+    }
+    .job-listing {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .job-listing:hover {
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Job Analysis Project</h1>
+  <input type="file" id="file-input" accept=".json">
+  
+  <div id="filters">
+    <label for="filter-level">Filter by Level:</label>
+    <select id="filter-level">
+      <option value="">All</option>
+    </select>
+    <label for="filter-type">Filter by Type:</label>
+    <select id="filter-type">
+      <option value="">All</option>
+    </select>
+    <label for="filter-skill">Filter by Skill:</label>
+    <select id="filter-skill">
+      <option value="">All</option>
+    </select>
+  </div>
+
+  <div id="sort-options">
+    <label for="sort-by">Sort by:</label>
+    <select id="sort-by">
+      <option value="title-asc">Title (A-Z)</option>
+      <option value="title-desc">Title (Z-A)</option>
+      <option value="time-oldest">Posted Time (Oldest First)</option>
+      <option value="time-newest">Posted Time (Newest First)</option>
+    </select>
+  </div>
+
+  <div id="job-listings"></div>
+
+  <script src="JobAnalysis.js"></script>
+</body>
+</html>
